@@ -10,8 +10,10 @@ dotenv.config()
 
 const app=express();
 
+app.use(express.json({ limit: '10mb' })); //json nikalta hai (next)
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
+
 app.use(cors());// cross orgin 
-app.use(express.json()); //json nikalta hai (next)
 
 app.use('/',userRoutes);
 app.use('/',orgRoutes);

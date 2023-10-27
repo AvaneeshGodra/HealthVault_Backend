@@ -4,7 +4,7 @@ import {SchemaTypes} from "mongoose";
 
 const Schema=mongoose.Schema;
 const imgSchema=new Schema({
-    'image':{data:Buffer, type:SchemaTypes.String},
+    'image':{type:SchemaTypes.String},
     'userid':{type:SchemaTypes.String},
     'date':{type:SchemaTypes.String}
 });
